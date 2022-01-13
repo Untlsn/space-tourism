@@ -6,7 +6,7 @@ import 'virtual:windi-devtools';
 
 let dispose: () => void
 
-const { hydrationPromise } = useClientRouter({
+useClientRouter({
   render(pageContext) {
     const content = document.getElementById('page-view')
     const { Page, pageProps } = pageContext
@@ -34,17 +34,4 @@ const { hydrationPromise } = useClientRouter({
       )
     }
   },
-  onTransitionStart,
-  onTransitionEnd,
 })
-
-hydrationPromise.then(() => {
-  console.log('Hydration finished; page is now interactive.')
-})
-
-function onTransitionStart() {
-  console.log('Page transition start')
-}
-function onTransitionEnd() {
-  console.log('Page transition end')
-}
