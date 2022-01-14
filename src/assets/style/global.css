@@ -1,0 +1,5 @@
+button:focus, input:focus {
+  outline: none;
+}
+
+.after:after { content: '' }

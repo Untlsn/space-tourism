@@ -5,30 +5,35 @@ module.exports = {
   },
   theme: {
     extend: {
-      very: {
-        dark: '#0B0D17'
+      screens: {
+        'xl': { min: '1440px' },
       },
-      bluish: {
-        gray: 'D0D6F9',
+      colors: {
+        very: {
+          dark: '#0B0D17'
+        },
+        bluish: {
+          gray: 'D0D6F9',
+        },
       },
-    },
-    fontSize: {
-      heading: {
-        1: '150px',
-        2: '100px',
-        3: '56px',
-        4: '32px',
-        5: '28px',
+      fontSize: {
+        heading: {
+          1: '150px',
+          2: '100px',
+          3: '56px',
+          4: '32px',
+          5: '28px',
+        },
+        subheading: {
+          1: '28',
+          2: '14',
+        }
       },
-      subheading: {
-        1: '28',
-        2: '14',
+      letterSpacing: {
+        heading: '4.75px',
+        subheading: '2.35px',
+        nav: '2.7px'
       }
     },
-    letterSpacing: {
-      heading: '4.75px',
-      subheading: '2.35px',
-      nav: '2.7px'
-    }
   },
 }

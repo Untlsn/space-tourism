@@ -3,6 +3,7 @@ import { escapeInject, dangerouslySkipEscape } from 'vite-plugin-ssr'
 import { PageContext } from './types'
 import logoUrl from './logo.svg'
 import 'virtual:windi.css';
+import PageProvider from '$/renderer/lib/providers/PageProvider';
 
 
 export { render }
@@ -12,10 +13,8 @@ export { passToClient }
 const passToClient = ['pageProps', 'documentProps']
 
 function render(pageContext: PageContext) {
-  const { Page, pageProps } = pageContext
-
   const pageHtml = renderToString(() => (
-    <Page {...pageProps} />
+    <PageProvider {...pageContext} />
   ))
 
   // See https://vite-plugin-ssr.com/head
@@ -31,9 +30,15 @@ function render(pageContext: PageContext) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="${description}" />
         <title>${title}</title>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
+          html {
+            font-family: 'Barlow Condensed', sans-serif;
+          }
+        </style>
         ${dangerouslySkipEscape(generateHydrationScript())}
       </head>
-      <body>
+      <body class="bg-very-dark text-white">
         <div id="page-view">${dangerouslySkipEscape(pageHtml)}</div>
       </body>
     </html>`
