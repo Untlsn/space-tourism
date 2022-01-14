@@ -31,10 +31,7 @@ function render(pageContext: PageContext) {
         <meta name="description" content="${description}" />
         <title>${title}</title>
         <style>
-          @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
-          html {
-            font-family: 'Barlow Condensed', sans-serif;
-          }
+          @import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
         </style>
         ${dangerouslySkipEscape(generateHydrationScript())}
       </head>

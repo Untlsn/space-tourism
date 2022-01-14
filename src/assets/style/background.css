@@ -1,17 +1,17 @@
-@media (min-width: 1440px) {
-  .home {
+@media (min-width: 1024px) {
+  .bg-home {
     background-image: url('/images/home/background-home-desktop.jpg');
   }
 }
 
-@media (max-width: 1439px) {
-  .home {
+@media (max-width: 1023px) {
+  .bg-home {
     background-image: url('/images/home/background-home-tablet.jpg');
   }
 }
 
-@media (max-width: 1023px) {
-  .home {
+@media (max-width: 767px) {
+  .bg-home {
     background-image: url('/images/home/background-home-mobile.jpg');
   }
 }

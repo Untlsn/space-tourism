@@ -13,21 +13,13 @@ module.exports = {
           dark: '#0B0D17'
         },
         bluish: {
-          gray: 'D0D6F9',
+          gray: '#D0D6F9',
         },
       },
-      fontSize: {
-        heading: {
-          1: '150px',
-          2: '100px',
-          3: '56px',
-          4: '32px',
-          5: '28px',
-        },
-        subheading: {
-          1: '28',
-          2: '14',
-        }
+      fontFamily: {
+        Bellefair: ['Bellefair', 'serif'],
+        BarlowCondensed: ['Barlow Condensed', 'sans-serif'],
+        Barlow: ['Barlow', 'sans-serif'],
       },
       letterSpacing: {
         heading: '4.75px',
